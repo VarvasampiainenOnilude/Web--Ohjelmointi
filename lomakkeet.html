@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Keskustelu</h1>
+    <h2>Jätä kommentti</h2>
+
+    <!-- Lomake -->
+    <form>
+        <label for="comment">Kommentti:</label><br>
+        <textarea id="comment" name="comment"></textarea><br><br>
+
+        <label for="email">Sähköpostiosoite:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="birthday">Syntymäpäivä:</label><br>
+        <input type="date" id="birthday" name="birthday"><br><br>
+
+        <label for="type">Viestin tyyppi:</label><br>
+        <select id="type" name="type">
+            <option value="kysymys">Kysymys</option>
+            <option value="kommentti">Kommentti</option>
+        </select><br><br>
+
+        <label>
+            <input type="checkbox" name="marketing">
+            Annan luvan käyttää tietojani markkinointiin
+        </label><br><br>
+
+        <button type="submit">Lähetä</button>
+    </form>
+
+    <h2>Aiemmat kommentit</h2>
+
+    
+    <article class="comment">
+        <p>Tämä sivusto on todella ahh!</p>
+        <small>Lähetetty: 12.3.2026 klo 14:22 — test@ankka.com</small>
+    </article>
+
+    <article class="comment">
+        <p>Vihaan tätä sivustoa?</p>
+        <small>Lähetetty: 11.3.2026 klo 09:10 — tobi@edu.newyork.fi</small>
+    </article>
+
+    <article class="comment">
+        <p>Missä on lähin vessa?</p>
+        <small>Lähetetty: 10.3.2026 klo 18:45 — oluwa@veveve.fi</small>
+    </article>
+
+    <article class="comment">
+        <p>Miks ette myy teiä keuhkojanne?</p>
+        <small>Lähetetty: 9.3.2026 klo 12:05 — oni@shoemail.com</small>
+    </article>
+
+    <article class="comment">
+        <p>Jeesus pelastaa!</p>
+        <small>Lähetetty: 8.3.2026 klo 20:33 — lude@email.fi</small>
+    </article>
+
+</body>
+</html>
