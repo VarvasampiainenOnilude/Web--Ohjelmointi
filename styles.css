@@ -4,7 +4,7 @@ body {
 
 /* Sivun yleinen tausta ja marginaalit */
 body {
-    background-color: #f2f2f7;   /* hillitty vaalea tausta */
+    background-color: #be92c7;   /* hillitty vaalea tausta */
     margin-left: 64px;
     margin-right: 64px;
     font-family: Arial, sans-serif;
@@ -14,22 +14,22 @@ body {
 /* Otsikoiden värit ja fonttikoot */
 h1 {
     font-size: 60px;
-    color: grey;
+    color: rgb(255, 255, 255);
 }
 
 h2 {
     font-size: 48px;
-    color: grey;
+    color: rgb(255, 255, 255);
 }
 
 h3 {
     font-size: 32px;
-    color: grey;
+    color: rgb(255, 255, 255);
 }
 
 h4 {
     font-size: 18px;
-    color: grey;
+    color: rgb(255, 255, 255);
 }
 
 h5, h6 {
@@ -38,14 +38,44 @@ h5, h6 {
 
 /* Perusteksti */
 p {
-    color: #333;
+    color: #ffffff;
     line-height: 1.5;
+    font-style: oblique;
+    font-size: 5mm;
 }
 
 
+
 section {
-    background-color: #ffffff;       
-    border: 2px solid #d0d0d5;  
+    background-color: #da74e7;       
+    border: 2px solid #904a92;  
     padding: 16px;
     margin-bottom: 20px;
+}
+
+a {
+    font-size: 10mm;
+    color: rgb(125, 20, 223)
+}
+a:hover {
+    color: rgb(238, 49, 238)
+}
+
+a:visited {
+    color: rgba(128, 128, 128, 0.493)
+}
+button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(125, 20, 223)
+}
+button:hover{
+    background-color: rgb(238, 49, 238) ;
+}
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: #fff9c4;
+}
+li:last-child {
+    font-style:italic
 }
