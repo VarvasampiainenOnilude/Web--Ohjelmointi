@@ -7,8 +7,11 @@
 
 <h2>Jätä kommentti</h2>
 
-<form>
 
+<button command="show-modal" commandfor="moi">kommentti</button>
+
+<dialog id = 'moi'>
+  <form>
   <label>Kommentti:</label>
   <textarea></textarea> <br><br>
 
@@ -29,9 +32,10 @@
     Hyväksyn tietojen käytön markkinointiin
   </label><br><br>
 
-  <button>Lähetä</button>
-
+   <button>Lähetä</button>
+    <button> Peruuta </button>
 </form>
+</dialog>
 
 <h2>Aiemmat kommentit</h2>
 
