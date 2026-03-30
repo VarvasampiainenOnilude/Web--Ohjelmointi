@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+
+  grid-template-areas:
+    "tyokalut navigaatio navigaatio"
+    "tyokalut sisalto sivupalkki"
+    "status status status";
+
+  grid-template-columns: 5em 2fr 1fr;
+  grid-template-rows: 2em auto 1em;
+}
+
+section {
+  grid-area: tyokalut;
+  background: #f88;
+}
+
+nav {
+  grid-area: navigaatio;
+  background: #ffeb3b;
+}
+
+main {
+  grid-area: sisalto;
+  background: #8bc34a;
+}
+
+aside {
+  grid-area: sivupalkki;
+  background: #64b5f6;
+}
+
+footer {
+  grid-area: status;
+  background: #ba68c8;
+}
