@@ -4,35 +4,45 @@ body {
   display: grid;
 
   grid-template-areas:
-    "tyokalut navigaatio navigaatio"
-    "tyokalut sisalto sivupalkki"
+    'paanavigointi paanavigointi paanavigointi'
+    "navigaatio navigaatio navigaatio"
+    "tyokalut sisalto sisalto"
     "status status status";
 
-  grid-template-columns: 5em 2fr 1fr;
-  grid-template-rows: 2em auto 1em;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 3em 2em 21.5cm;
 }
 
 section {
   grid-area: tyokalut;
   background: #f88;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 nav {
   grid-area: navigaatio;
   background: #ffeb3b;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 main {
   grid-area: sisalto;
   background: #8bc34a;
-}
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-aside {
-  grid-area: sivupalkki;
-  background: #64b5f6;
 }
 
 footer {
   grid-area: status;
   background: #ba68c8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+span {
+  grid-area: paanavigointi;
+  background: #6cecc6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }

@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "My Special Font";
+  src: url("./Splatink_PERSONAL_USE_ONLY.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "My Special Font2";
+  src: url("./Jengah\ Demo.otf");
+  font-weight: bold;
+}
+
+
 h1 {
     font-family: 'My Special Font', Arial, sans-serif;
     color: #ffffff;
