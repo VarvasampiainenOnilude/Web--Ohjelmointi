@@ -1,23 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css">
-    
+       <link rel="stylesheet" href="../styles.css">
+       <meta charset="utf-8">
+       <a href="index.html">Portofolioon Takaisin</a>
+    <body>
+        <section>        
+
+            <h3>Laskin</h3>
+
+            <input id="numero1" type="number" placeholder="Ensimmäinen numero">
+            <input id="numero2" type="number" placeholder="Toinen numero">
+
+            <button onclick="laskin_summa()">+</button>
+            <button onclick="laskin_vahennys()">-</button>
+            <button onclick="laskin_kerto()">*</button>
+            <button onclick="laskin_jako()">/</button>
+            <script src='muuttuja.js'></script>
+        </section>
+    </body>
 </head>
-<body>
-    <section>
-    <h2>Muuttujat</h2>
-
-    <button onclick="summa()">Summa</button>
-    <button onclick="vahennys()">Vähennys</button>
-    <button onclick="kerto()">Kerto</button>
-    <button onclick="jako()">Jako</button>
-    <script src="muuttuja.js" defer></script>
-
-</section>
-
-
-</body>
-</html>

@@ -1,85 +1,85 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="fi">
+<head>
     <meta charset="utf-8">
-
     <meta name="keywords" content="lomake, web-ohjelmointi, Kysymys">
-    <meta name="description" content="Sivu on lomake">
+    <meta name="description" content="Keskustelusivu">
     <meta name="author" content="Oluwatobi Onilude">
-    <link rel="icon" href="aitisrakastaja.png" type="image/png">
     <link rel="stylesheet" href="../styles.css">
-    <script src="lomake.js"></script>
- </head>
+    <script src="lomake.js" defer></script>
+</head>
 
- <body>
+<body>
 
- <h1>Keskustelu</h1>
+<h1>Keskustelu</h1>
 
+<h2>Jätä kommentti</h2>
 
- <h2>Jätä kommentti</h2>
+<!-- Nappi joka avaa dialogin -->
+<button onclick="document.getElementById('moi').showModal()">Kommentti</button>
 
+<!-- DIALOGI -->
+<dialog id="moi">
+    <form>
 
- <button command="show-modal" commandfor="moi">kommentti</button>
+        <label for="body">Kommentti:</label><br>
+        <textarea id="body"></textarea><br><br>
 
- <dialog id = 'moi'>
-  <form>
-  <label>Kommentti:</label>
-  <textarea></textarea> <br><br>
+        <label for="email">Sähköposti:</label><br>
+        <input id="email" type="email"><br><br>
 
-  <label>Sähköposti:</label>
-  <input type="email"><br><br>
+        <label for="birthday">Syntymäpäivä:</label><br>
+        <input id="birthday" type="date"><br><br>
 
-  <label> Syntymäpäivä:</label>
-  <input type="date"><br><br>
+        <label for="type">Viestin tyyppi:</label><br>
+        <select id="type">
+            <option selected>Kysymys</option>
+            <option>Kommentti</option>
+        </select><br><br>
 
-  <label>Viestin tyyppi:</label>
-  <select>
-    <option>Kysymys</option><br><br>
-    <option>Kommentti</option><br><br>
-  </select><br><br>
+        <label>
+            <input id="usage" type="checkbox">
+            Hyväksyn tietojen käytön markkinointiin
+        </label><br><br>
 
-  <label>
-    <input type="checkbox">
-    Hyväksyn tietojen käytön markkinointiin
-  </label><br><br>
+        <button onclick="send(event)">Lähetä</button>
+        <button type="button" onclick="document.getElementById('moi').close()">Peruuta</button>
 
-   <button>Lähetä</button>
-    <button> Peruuta </button>
-</form>
+    </form>
 </dialog>
 
 <h2>Aiemmat kommentit</h2>
 
 <article>
-  <p>Tämä sivusto on todella ahh!</p>
-  <small>12.3.2026 14:22 — test@ankka.com</small>
+    <p>Tämä sivusto on todella ahh!</p>
+    <small>12.3.2026 14:22 — test@ankka.com</small>
 </article>
 
 <article>
-  <p>Vihaan tätä sivustoa?</p>
-  <small>11.3.2026 09:10 — tobi@edu.newyork.fi</small>
+    <p>Vihaan tätä sivustoa?</p>
+    <small>11.3.2026 09:10 — tobi@edu.newyork.fi</small>
 </article>
 
 <article>
-  <p>Missä on lähin vessa?</p>
-  <small>10.3.2026 18:45 — oluwa@veveve.fi</small>
+    <p>Missä on lähin vessa?</p>
+    <small>10.3.2026 18:45 — oluwa@veveve.fi</small>
 </article>
 
 <article>
-  <p>Miks ette myy teiä keuhkojanne?</p>
-  <small>9.3.2026 12:05 — oni@shoemail.com</small>
+    <p>Miks ette myy teiä keuhkojanne?</p>
+    <small>9.3.2026 12:05 — oni@shoemail.com</small>
 </article>
 
 <article>
-  <p>Jeesus pelastaa!</p>
-  <small>8.3.2026 20:33 — lude@email.fi</small>
+    <p>Jeesus pelastaa!</p>
+    <small>8.3.2026 20:33 — lude@email.fi</small>
 </article>
 
- <nav>
-        <a href="../index2.html">Työkokemukseni</a> <br>
-        <a href="../index.html">Etusivu (cv)</a>
-        <a href="index.html">Portfolio</a>
-    </nav> 
+<nav>
+    <a href="../index2.html">Työkokemukseni</a><br>
+    <a href="../index.html">Etusivu (cv)</a><br>
+    <a href="index.html">Portfolio</a>
+</nav>
 
 </body>
 </html>
