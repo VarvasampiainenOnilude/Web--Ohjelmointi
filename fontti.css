@@ -19,8 +19,37 @@ h1 {
 
 
 p {
+     font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.1cm;
+}
+
+
+a {
     font-family: 'My Special Font2', italic, sans-serif;
     color: #ffffff;
     font-size: 1.1cm;
 }
+
+
+h2 {
+    font-family: 'My Special Font2', italic, sans-serif;
+    color: #ffffff;
+    font-size: 1.1cm;
+}
+
+
+ul {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 0.5cm;
+}
+
+
+h3 {
+    font-family: 'My Special Font2', italic, sans-serif;
+    color: #ffffff;
+    font-size: 1.1cm;  
+}
+
 
