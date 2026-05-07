@@ -13,5 +13,6 @@ function send(e) {
     console.log(usage);
     console.log(body);
 
-    document.getElementById("moi").close();
+    let dialog = document.querySelector("dialog");
+    dialog.close();
 }
