@@ -37,38 +37,75 @@ const rivit = document.getElementById("rivit");
 
 // Funktio, joka luo rivit taulukkoon
 function luoRivit() {
-    // Tyhjennetään vanhat rivit
     rivit.innerHTML = "";
 
-    // Käydään läpi jokainen henkilö
     for (let henkilo of henkilot) {
 
-        // Luodaan uusi tr-elementti
         let rivi = document.createElement("tr");
 
-        // Luodaan jokaiselle tiedolle oma td
+        // Nimi
         let tdNimi = document.createElement("td");
         tdNimi.innerHTML = henkilo.name;
 
+        // Ikä + 🍺 jos 18 tai yli
         let tdIka = document.createElement("td");
-        tdIka.innerHTML = henkilo.age;
+        tdIka.innerHTML = henkilo.age >= 18
+            ? henkilo.age + " 🍺"
+            : henkilo.age;
 
+        // Työ + 🎓 jos opiskelija
         let tdTyo = document.createElement("td");
-        tdTyo.innerHTML = henkilo.job;
+        tdTyo.innerHTML = henkilo.job.toLowerCase() === "opiskelija"
+            ? henkilo.job + " 🎓"
+            : henkilo.job;
 
+        // Ajokortti
         let tdAjokortti = document.createElement("td");
         tdAjokortti.innerHTML = henkilo.driversLicense ? "Kyllä" : "Ei";
 
-        // Lisätään td:t riviin
         rivi.appendChild(tdNimi);
         rivi.appendChild(tdIka);
         rivi.appendChild(tdTyo);
         rivi.appendChild(tdAjokortti);
 
-        // Lisätään rivi tbodyyn
         rivit.appendChild(rivi);
     }
 }
 
 // Kutsutaan funktiota heti sivun latauksessa
 luoRivit();
+
+
+// Funktio uuden henkilön lisäämiseen
+function lisaaHenkilo() {
+    let nimi = document.getElementById("nimi").value.trim();
+    let ika = Number(document.getElementById("ika").value);
+    let tyo = document.getElementById("tyo").value.trim();
+    let ajokortti = document.getElementById("ajokortti").checked;
+
+    // Ikävalidointi
+    if (ika < 0) {
+        alert("iän pitää olla positiivinen luku");
+        return;
+    }
+
+    // Luodaan uusi henkilöobjekti
+    let uusi = {
+        name: nimi,
+        age: ika,
+        job: tyo,
+        driversLicense: ajokortti
+    };
+
+    // Lisätään taulukkoon
+    henkilot.push(uusi);
+
+    // Päivitetään näkymä
+    luoRivit();
+
+    // Tyhjennetään lomake
+    document.getElementById("nimi").value = "";
+    document.getElementById("ika").value = "";
+    document.getElementById("tyo").value = "";
+    document.getElementById("ajokortti").checked = false;
+}

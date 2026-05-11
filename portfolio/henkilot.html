@@ -25,5 +25,20 @@
     </tbody>
 </table>
 
+<h2>Lisää uusi henkilö</h2>
+
+<form onsubmit="lisaaHenkilo(); return false;">
+    <input id="nimi" type="text" placeholder="Nimi">
+    <input id="ika" type="number" placeholder="Ikä">
+    <input id="tyo" type="text" placeholder="Työ">
+
+    <label>
+        <input id="ajokortti" type="checkbox">
+        Ajokortti
+    </label>
+
+    <button type="submit">Lähetä</button>
+</form>
+
 </body>
 </html>
