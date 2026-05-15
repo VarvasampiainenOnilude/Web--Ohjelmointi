@@ -218,7 +218,7 @@ eriOikeudet.forEach(function(oikeus) {
 function absLuku() {
 
   let eka =
-    Number(document.getElementById("eka").value);
+    Number(document.getElementById("numero1").value);
 
   alert(Math.abs(eka));
 
@@ -229,7 +229,7 @@ function absLuku() {
 function sqrtLuku() {
 
   let eka =
-    Number(document.getElementById("eka").value);
+    Number(document.getElementById("numero1").value);
 
   alert(Math.sqrt(eka));
 
@@ -240,10 +240,10 @@ function sqrtLuku() {
 function powLuku() {
 
   let eka =
-    Number(document.getElementById("eka").value);
+    Number(document.getElementById("numero1").value);
 
   let toka =
-    Number(document.getElementById("toka").value);
+    Number(document.getElementById("numero2").value);
 
   alert(Math.pow(eka, toka));
 
@@ -254,10 +254,10 @@ function powLuku() {
 function maxLuku() {
 
   let eka =
-    Number(document.getElementById("eka").value);
+    Number(document.getElementById("numero1").value);
 
   let toka =
-    Number(document.getElementById("toka").value);
+    Number(document.getElementById("numero2").value);
 
   alert(Math.max(eka, toka));
 
@@ -268,10 +268,10 @@ function maxLuku() {
 function minLuku() {
 
   let eka =
-    Number(document.getElementById("eka").value);
+    Number(document.getElementById("numero1").value);
 
   let toka =
-    Number(document.getElementById("toka").value);
+    Number(document.getElementById("numero2").value);
 
   alert(Math.min(eka, toka));
 
@@ -282,7 +282,7 @@ function minLuku() {
 function roundLuku() {
 
   let eka =
-    Number(document.getElementById("eka").value);
+    Number(document.getElementById("numero1").value);
 
   alert(Math.round(eka));
 
