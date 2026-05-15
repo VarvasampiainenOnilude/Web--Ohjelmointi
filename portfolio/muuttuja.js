@@ -215,3 +215,75 @@ eriOikeudet.forEach(function(oikeus) {
 
 });
 
+function absLuku() {
+
+  let eka =
+    Number(document.getElementById("eka").value);
+
+  alert(Math.abs(eka));
+
+}
+
+
+
+function sqrtLuku() {
+
+  let eka =
+    Number(document.getElementById("eka").value);
+
+  alert(Math.sqrt(eka));
+
+}
+
+
+
+function powLuku() {
+
+  let eka =
+    Number(document.getElementById("eka").value);
+
+  let toka =
+    Number(document.getElementById("toka").value);
+
+  alert(Math.pow(eka, toka));
+
+}
+
+
+
+function maxLuku() {
+
+  let eka =
+    Number(document.getElementById("eka").value);
+
+  let toka =
+    Number(document.getElementById("toka").value);
+
+  alert(Math.max(eka, toka));
+
+}
+
+
+
+function minLuku() {
+
+  let eka =
+    Number(document.getElementById("eka").value);
+
+  let toka =
+    Number(document.getElementById("toka").value);
+
+  alert(Math.min(eka, toka));
+
+}
+
+
+
+function roundLuku() {
+
+  let eka =
+    Number(document.getElementById("eka").value);
+
+  alert(Math.round(eka));
+
+}
