@@ -95,3 +95,123 @@ function naytaPaivamaara() {
   document.getElementById("kuukausi").innerHTML =
     kuukausi;
 }
+
+let Veijo = new Set([
+  "luku",
+  "poisto"
+]);
+
+let Elvira = new Set([
+  "luku",
+  "kirjoitus",
+  "muokkaus"
+]);
+
+let Mehdi = new Set([
+  "luku",
+  "muokkaus",
+  "poisto"
+]);
+
+let Tuuli = new Set([
+  "kirjoitus",
+  "poisto"
+]);
+
+function naytaOikeudet(kayttajaSetti, sectionId) {
+
+  let ul = document.querySelector(
+    "#" + sectionId + " ul"
+  );
+
+  kayttajaSetti.forEach(function(oikeus) {
+
+    let li = document.createElement("li");
+
+    li.textContent = oikeus;
+
+    ul.appendChild(li);
+
+  });
+}
+
+naytaOikeudet(Veijo, "Veijo");
+naytaOikeudet(Elvira, "Elvira");
+naytaOikeudet(Mehdi, "Mehdi");
+naytaOikeudet(Tuuli, "Tuuli");
+
+
+
+let veijoTuuliSetti = new Set([
+  ...Veijo,
+  ...Tuuli
+]);
+
+veijoTuuliSetti.forEach(function(oikeus) {
+
+  let li = document.createElement("li");
+
+  li.textContent = oikeus;
+
+  document
+    .getElementById("veijotuuli")
+    .appendChild(li);
+
+});
+
+
+
+let yhteiset = new Set();
+
+Mehdi.forEach(function(oikeus) {
+
+  if(Elvira.has(oikeus)) {
+    yhteiset.add(oikeus);
+  }
+
+});
+
+yhteiset.forEach(function(oikeus) {
+
+  let li = document.createElement("li");
+
+  li.textContent = oikeus;
+
+  document
+    .getElementById("mehdielvira")
+    .appendChild(li);
+
+});
+
+
+
+let eriOikeudet = new Set();
+
+Elvira.forEach(function(oikeus) {
+
+  if(!Tuuli.has(oikeus)) {
+    eriOikeudet.add(oikeus);
+  }
+
+});
+
+Tuuli.forEach(function(oikeus) {
+
+  if(!Elvira.has(oikeus)) {
+    eriOikeudet.add(oikeus);
+  }
+
+});
+
+eriOikeudet.forEach(function(oikeus) {
+
+  let li = document.createElement("li");
+
+  li.textContent = oikeus;
+
+  document
+    .getElementById("elviratuuli")
+    .appendChild(li);
+
+});
+
