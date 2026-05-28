@@ -1,48 +1,61 @@
 body {
   margin: 0;
   height: 100vh;
+}
+  .grid-container{
+
   display: grid;
-
   grid-template-areas:
-    'paanavigointi paanavigointi paanavigointi'
-    "navigaatio navigaatio navigaatio"
-    "tyokalut sisalto sisalto"
+    'header header header'
+    "nav nav nav"
+    "subnav content content"
     "status status status";
+    
 
-  grid-template-columns: 1fr 1fr 1fr ;
-  grid-template-rows: 3em 2em 21.5cm;
+  grid-template-columns: 190px 1fr 1fr ;
+  grid-template-rows: 75px 110px 1fr 75px;
 }
 
-section {
-  grid-area: tyokalut;
+header {
+  grid-area: header;
   background: #f88;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
 
 }
 
 nav {
-  grid-area: navigaatio;
-  background: #ffeb3b;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  grid-area: nav;
+    display: grid;
+grid-template-columns: repeat(3, 1fr);
+background-color: #edf037;
 
 }
 
 main {
-  grid-area: sisalto;
+  grid-area: content;
   background: #8bc34a;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+
+}
+
+aside {
+  grid-area: subnav;
+  background: #ec42e4;
+    display: grid;
+grid-template-columns: repeat(1fr);
+
+}
+aside a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(245, 199, 147);
 }
 
 footer {
   grid-area: status;
-  background: #ba68c8;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-span {
-  grid-area: paanavigointi;
   background: #6cecc6;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: grid;
+grid-template-columns: repeat(3, 1fr);
 
 }

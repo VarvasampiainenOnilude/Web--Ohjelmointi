@@ -32,6 +32,6 @@
 /* Kaikille kuville sama leveys */
 .item img {
     width: 60px;
-    height: auto;
-    border-radius: 20%;
+  height: auto;
+
 }
